@@ -1,0 +1,7 @@
+*.pyc
+docker-compose.override.yml
+.python-version
+tmp/
+dist/
+*.egg-info
+.ipynb_checkpoints/

@@ -1,0 +1,46 @@
+version: '3.4'
+services:
+  # Builds
+  dvent:
+    build:
+      context: .
+      target: dvent
+    image: jcrosen/dvent
+  dvent-test:
+    build:
+      context: .
+      target: dvent-test
+    image: jcrosen/dvent-test
+  dvent-jupyter:
+    build:
+      context: .
+      target: dvent-jupyter
+    image: jcrosen/dvent-jupyter
+
+  # Services - Extend builds
+  dvent-behave:
+    image: jcrosen/dvent-test
+    volumes:
+      - ./dvent:/project/run/dvent
+      - ./features:/project/run/features
+  dvent-console:
+    image: jcrosen/dvent-jupyter
+    command:
+      - console
+    volumes:
+      - ./dvent:/project/run/dvent
+  dvent-notebook:
+    image: jcrosen/dvent-jupyter
+    command:
+      - notebook
+      - --ip=0.0.0.0
+      - --port=8288
+      - --no-browser
+    environment:
+      JUPYTER_TOKEN: ${DVENT_JUPYTER_TOKEN:-dangeroussecrets!}
+    volumes:
+      - ./dvent:/project/run/dvent
+      - ./features:/project/run/features
+      - ./notebooks:/project/run/notebooks
+    ports:
+      - 8288:8288
