@@ -14,7 +14,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='dvent',
-    version='0.1.0',
+    version='0.1.1',
     url='https://github.com/jcrosen/dvent',
     author='Jeremy Crosen',
     author_email='jeremy.crosen@gmail.com',
