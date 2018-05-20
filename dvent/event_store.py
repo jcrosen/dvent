@@ -202,6 +202,9 @@ class InMemoryEventDB(object):
                 version = len(self.streams.get(stream_id, []))
                 event = event.set('version', version)
 
+            if not event.stream_id:
+                event.set('stream_id', stream_id)
+
             new_index = len(self.events)
             self.events = self.events.append(event)
             self.streams[stream_id] = self.streams\
