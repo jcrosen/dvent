@@ -1,5 +1,12 @@
 Dvent
 ~~~~~
+.. image:: https://img.shields.io/pypi/v/dvent.svg
+    :target: https://pypi.python.org/pypi/dvent
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/l/dvent.svg
+    :target: https://pypi.python.org/pypi/dvent/
+    :alt: License
 
 **Dvent** is a minimal set of simple, immutable, and functional models and tools
 intended to support `Domain Driven Design`_ (DDD) and function as the
