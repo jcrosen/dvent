@@ -76,7 +76,7 @@ Dvent includes integration with the Jupyter_ project via a docker image. To use 
 
   ::
 
-    DVENT_JUPYTER_TYOKEN=<password-or-token-value> docker-compose up -d dvent-notebook
+    DVENT_JUPYTER_TOKEN=<password-or-token-value> docker-compose up -d dvent-notebook
 
 *Note: this will download and build the images which may require a good internet connection*
 
@@ -97,7 +97,7 @@ fit the need, so I made one over an intense weekend and we've been using it with
 any major modifications for over 15 months as of release :code:`0.1.0` (May 2018).
 
 It's very plausible that without Discogs_ I would never have written Dvent and even so not
-considered it as vialble enterprise-level software.  I consider it the birthplace and indirect
+considered it as viable enterprise-level software.  I consider it the birthplace and indirect
 sponsor of the project.
 
 Why the name "Dvent"?
@@ -108,7 +108,7 @@ An *extreme* portmanteau of:
 - Discogs_
 - **Event**
 
-Obilgatory `naming things`_ is hard reference ;)
+Obligatory `naming things`_ is hard reference ;)
 
 Special Thanks
 --------------
