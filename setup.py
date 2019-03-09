@@ -14,7 +14,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='dvent',
-    version='0.1.1',
+    version='0.2.0',
     url='https://github.com/jcrosen/dvent',
     author='Jeremy Crosen',
     author_email='jeremy.crosen@gmail.com',
@@ -30,11 +30,12 @@ setup(
     ),
     packages=['dvent'],
     classifiers=[
-        'Development Status :: 4 - Beta',
+        'Development Status :: 5 - Production/Stable',
         'Intended Audience :: Developers',
         'License :: OSI Approved :: Apache Software License',
         'Natural Language :: English',
         'Programming Language :: Python :: 3',
+        'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.4',
@@ -42,7 +43,7 @@ setup(
         'Topic :: Software Development :: Libraries',
     ],
     install_requires=[
-        'pyrsistent>=0.14.2,<1',
+        'pyrsistent>=0.14.11,<0.15',
     ],
     python_requires='>=3.4',
 )

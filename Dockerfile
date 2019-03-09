@@ -1,4 +1,4 @@
-ARG DVENT_PYTHON_VERSION=3.6.5
+ARG DVENT_PYTHON_VERSION=3.7-slim
 FROM python:${DVENT_PYTHON_VERSION} as dvent
 RUN groupadd -r dvent -g 1000 &&\
     useradd --no-log-init -r -g dvent -u 1000 dvent &&\
